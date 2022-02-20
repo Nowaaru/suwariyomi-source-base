@@ -1,4 +1,4 @@
-export default class {
+module.exports = class {
   constructor() {
     // If any of your functions require the "this" field, you can bind it here.
     this.serialize = this.serialize.bind(this);
@@ -6,7 +6,6 @@ export default class {
     this.search = this.search.bind(this);
     this.getManga = this.getManga.bind(this);
     this.setLocale("en");
-    this.setFilters({});
   }
 
   // Metadata. No need to provide if you don't wish to.
@@ -47,10 +46,75 @@ export default class {
   _locales = ["en"];
 
   // searchFilters should be used to filter the results of search.
-  searchFilters = {};
+  searchFilters = {
+    query: "",
+    offset: 0,
+    results: Infinity,
+
+    testOne: [],
+    testTwo_1: [],
+    testTwo_2: [],
+  };
 
   // See source.d.ts for the format of the filters object.
-  searchFilterFieldTypes = {};
+  searchFilterFieldTypes = {
+    Test: {
+      fieldType: "checkbox",
+      writeTo: "testOne",
+      choices: [
+        {
+          display: "Test One",
+          value: "testOne",
+        },
+        {
+          display: "Test Two",
+          value: "testTwo",
+        },
+        {
+          display: "Test Three",
+        },
+      ],
+    },
+
+    TestTwo: {
+      fieldType: "checkbox3",
+      writeTo: "testTwo_1",
+      disallowedWriteTo: "testTwo_2",
+      choices: [
+        {
+          display: "Test Two One",
+          value: "testTwo_1",
+        },
+        {
+          display: "Test Two Two",
+          value: "testTwo_2",
+        },
+        {
+          display: "Test Two Three",
+          value: "testTwo_3",
+        },
+      ],
+    },
+
+    TestThree: {
+      fieldType: "select",
+      writeTo: "testThree",
+      choices: [
+        {
+          label: "Test Three One",
+          value: "testThree_1",
+        },
+        {
+          label: "Test Three Two",
+          value: "testThree_2",
+        },
+        {
+          label: "Test Three Three",
+          value: "testThree_3",
+        },
+      ],
+    },
+  };
 
   setLocale(locale) {
     this._locale = locale;
@@ -118,4 +182,4 @@ export default class {
   async search() {
     return [];
   }
-}
+};
