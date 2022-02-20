@@ -4,6 +4,14 @@
 This is the base to make a custom source for the Suwariyomi
 application. In the unlikely case that this may be out of date, please read through the Suwariyomi source to find accurate type explanations.
 <br/><br/>
+<h2>Get Started</h2>
+
+1. Clone this repository by doing `git clone https://github.com/Nowaaru/suwariyomi-source-base.git`
+2. Then, enter the directory by doing `cd suwariyomi-source-base` (or, whatever you named it to be)
+3. Install all dependencies by running `npm install`.
+4. Get coding!
+5. When you're ready to see if everything works, test by running `npm test`.
+
 <h2>Field Types</h2>
 <h3>Checkbox</h3>
 
