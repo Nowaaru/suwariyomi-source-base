@@ -8,8 +8,19 @@ module.exports = class {
     this.setLocale("en");
   }
 
-  // Metadata. No need to provide if you don't wish to.
   _sourceName = "Main";
+  static _metadata = {
+    // Can be empty.
+    _version: "0.0.0",
+    _for: "~0.8.0",
+    _author: "",
+
+    contacts: {
+      github: "",
+      twitter: "",
+      email: "",
+    },
+  };
 
   getName() {
     return this._sourceName;
@@ -54,6 +65,7 @@ module.exports = class {
     testOne: [],
     testTwo_1: [],
     testTwo_2: [],
+    testThree: "testThree_1",
   };
 
   // See source.d.ts for the format of the filters object.
@@ -72,6 +84,7 @@ module.exports = class {
         },
         {
           display: "Test Three",
+          value: "testThree",
         },
       ],
     },

@@ -1,4 +1,10 @@
 const Main = require("../main");
+describe("Source Statics", () => {
+  it("should have metadata", () => {
+    expect(Main._metadata).toBeDefined();
+  });
+});
+
 describe("Source", () => {
   const myObject = new Main();
   it("should have locales that work with Intl class", () => {
@@ -15,8 +21,8 @@ describe("Source", () => {
   });
 
   describe("Search Filters", () => {
+    const Filters = myObject.getFilters();
     it("should include fields 'query', 'results', and 'offset'", () => {
-      const Filters = myObject.getFilters();
       expect(Filters).toHaveProperty("query");
       expect(Filters).toHaveProperty("results");
       expect(Filters).toHaveProperty("offset");
