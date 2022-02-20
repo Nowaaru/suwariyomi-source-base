@@ -1,12 +1,10 @@
 <h2>Suwariyomi Source Base</h2>
 <h4><code>thank you for your contributions!</code></h4>
-<hr />
 <h2> CURRENT VERSION: <b>~0.8.4</b></h2>
 This is the base to make a custom source for the Suwariyomi
 application. In the unlikely case that this may be out of date, please read through the Suwariyomi source to find accurate type explanations.
 <br/><br/>
 <h2>Field Types</h2>
-<hr/>
 <h3>Checkbox</h3>
 
 ##### ⚠️ This only works on array-based options!
@@ -61,6 +59,5 @@ application. In the unlikely case that this may be out of date, please read thro
 
 <br/>
 <h2>ADDENDUM</h2>
-<hr/>
 
 The code in your <code>main.js</code> file are commented, and you can run tests using <code>npm test</code>. Thank you again for your contributions!
