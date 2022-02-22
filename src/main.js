@@ -5,7 +5,7 @@ module.exports = class {
     this.serializeChapters = this.serializeChapters.bind(this);
     this.search = this.search.bind(this);
     this.getManga = this.getManga.bind(this);
-    this.setLocale("en");
+    this.getMangas = this.getMangas.bind(this);
   }
 
   _sourceName = "Main";
@@ -157,6 +157,15 @@ module.exports = class {
   // Should implicitly serialize to the Manga object format.
   async getManga(mangaID, doFull) {
     return {};
+  }
+
+  // An interface for `getMangas`. Should return a promise that resolves to an array of manga IDs.
+  // This is primarily used for cases where your API has optimizations for batch searching rather than
+  // spamming individual manga searches.
+
+  // If there is no such thing, simply call this.getManga on each item.
+  async getMangas(mangaIDs, doFull) {
+    return [];
   }
 
   // Self-explanatory.
