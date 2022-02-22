@@ -12,7 +12,7 @@ module.exports = class {
   static _metadata = {
     // Can be empty.
     _version: "0.0.0",
-    _for: "~0.8.0",
+    _for: "~0.9.0",
     _author: "",
 
     contacts: {
