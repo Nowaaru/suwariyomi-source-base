@@ -6,6 +6,8 @@ module.exports = class {
     this.search = this.search.bind(this);
     this.getManga = this.getManga.bind(this);
     this.getMangas = this.getMangas.bind(this);
+
+    this.tagColors = this.tagColours;
   }
 
   _sourceName = "Main";
@@ -50,6 +52,12 @@ module.exports = class {
 
   // tagID is present in case a user wants to search by tag (if supported).
   Tags = Promise.resolve([]);
+
+  // You can spell your variable as `TagColors`, but you always want to make `TagColours` in your constructor; since the reader uses `TagColours`.
+  tagColours = {
+    "Tag Name": "#DF2935",
+    "Slice Of Life": "#3529DF",
+  };
 
   // Should be able to resolve to a locale-specific string.
   _locale = "en";
