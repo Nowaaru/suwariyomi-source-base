@@ -12,16 +12,8 @@ module.exports = class {
 
   _sourceName = "Main";
   static _metadata = {
-    // Can be empty.
-    _version: "0.0.0",
-    _for: "~X.XX.X",
-    _author: "",
-
-    contacts: {
-      github: "",
-      twitter: "",
-      email: "",
-    },
+    isNSFW: false,
+    version: "1.0.0",
   };
 
   getName() {
@@ -178,6 +170,11 @@ module.exports = class {
 
   // Self-explanatory.
   getUrl(mangaID) {
+    return "";
+  }
+
+  // Made async in case it needs to make a request to an external API.
+  async IDFromURL(url) {
     return "";
   }
 
