@@ -1,6 +1,5 @@
 <h2>Suwariyomi Source Base</h2>
 <h4><code>thank you for your contributions!</code></h4>
-<h2> CURRENT VERSION: <b>~0.11.0</b></h2>
 This is the base to make a custom source for the Suwariyomi
 application. In the unlikely case that this may be out of date, please read through the Suwariyomi source to find accurate type explanations.
 <br/><br/>
