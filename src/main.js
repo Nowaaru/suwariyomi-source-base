@@ -1,3 +1,5 @@
+const metadata = require("./metadata.json");
+
 module.exports = class {
   constructor() {
     // If any of your functions require the "this" field, you can bind it here.
@@ -10,17 +12,16 @@ module.exports = class {
     this.tagColors = this.tagColours;
   }
 
-  _sourceName = "Main";
-  static _metadata = {
-    isNSFW: false,
-    version: "1.0.0",
-  };
+  // Ideally, all information regarding the source should be stored in metadata.json.
+  static _metadata = metadata;
+
+  static _name = metadata.name;
 
   getName() {
-    return this._sourceName;
+    return _name;
   }
 
-  _icon = "https://mangadex.org/favicon.ico";
+  _icon = metadata.icon;
 
   getIcon() {
     return this._icon;
