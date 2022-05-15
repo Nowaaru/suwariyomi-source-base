@@ -34,7 +34,8 @@ module.exports = class {
 
   // If this is not supported, return false.
   // Should return a boolean download status.
-  download = async () => {
+  download = async (location) => {
+    // location: folder where all downloads are located
     return false;
   };
 
